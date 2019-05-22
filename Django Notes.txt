@@ -1,0 +1,39 @@
+--Create virtual environment
+
+conda create --name myDjangoEnv django
+conda create --name MyDjangoEnv python=3.5
+conda install django ##install django with anaconda
+
+--List/Activate/Deactivate virtual environment
+
+conda info --envs  ##list envs
+activate MydjangoEnv
+deactivate MyDjangoEnv
+
+
+--Install Django with Anaconda
+Conda Install Django
+
+--Create django project 
+djando-admin startproject first_project
+
+--django files
+init.py blank python script, lets python know that the dir is a package
+settings, stores all settings
+urls.py all pages and patterns, regular expressions
+wsgi.py web server gateway interface, when deploy to production, you use it
+manage.py use for handling the project
+
+-- run app
+python manage.py runserver
+
+--create urls.py file inside appname folder
+--import appname views
+--add urls.py file from appname into urls.py file in project folder using include library
+--create templates folder and add appname folder
+--add html,css, js into appname folder within templates folder
+-- add variable in settings.py templates_dir = os.path.join(base_dir,"Templates")
+--urls.py map views method 
+--views.py add method to render content,html reponse,httpresponse
+
+
