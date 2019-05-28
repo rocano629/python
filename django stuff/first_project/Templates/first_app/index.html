@@ -1,21 +1,44 @@
 <!DOCTYPE html>
-{% load staticfiles %}
+{%load staticfiles%}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-    <link rel="stylesheet" href="{% static "css/mystyle.css"%} ">
+    <title>Django Level two</title>
+    <link rel="stylesheet" href="{% static "css/mystyle.css" %}" />
 </head>
 <body>
-    <h1>Hello from Template</h1>
-    <div>
-        {{ insert_me }}
-    </div>
-    <div><img src="{% static "images/Mario.jpg" %} " alt="image not found"></div>
+    <h1>Hi Welcome to Django level2</h1>
+    <h2>Here are you access records</h2>
+
+<div class="djangtwo">
+
+    {% if access_records %}
+
+        <table>
+            <thead>
+                <th>Site Name</th>
+                <th>Date Accessed</th>
+            </thead>
+        
+            {% for acc in access_records %}
+
+                <tr>
+                    <td>{{ acc.name }}</td>
+                    <td>{{ acc.date }}</td>
+
+                </tr>
+                
+            {% endfor %}
+
+        </table>
+    {% else %}
+        <p>No Access Records Found!</p>
+    {% endif %}
 
 
-    
+</div>
+
 </body>
 </html>
