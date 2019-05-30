@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Users Info</title>
+</head>
+<body>
+    <h1>Here are your users:</h1>
+    {% if users %}
+
+    <ol>
+        {% for person in users %}
+        <li>USer Info</li>
+        <ul>
+            <li>First Name: {{ person.FirstName }}</li>
+            <li>Last Name: {{ person.LastName }}</li>
+            <li>Email: {{ person.Email }}</li>
+        </ul>
+        {% endfor %}
+    </ol>
+
+    {% endif %}
+
+    <p>Test</p>
+</body>
+</html>
