@@ -1,5 +1,6 @@
 --Create virtual environment
 
+
 conda create --name myDjangoEnv django
 conda create --name MyDjangoEnv python=3.5
 conda install django ##install django with anaconda
