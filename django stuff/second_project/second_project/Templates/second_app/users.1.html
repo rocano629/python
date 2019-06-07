@@ -11,11 +11,21 @@
 </head>
 <body>
     <h1>Please Sign up here!</h1>
-    <form method="POST">
-        {{ form.as_p }}
-        {% csrf_token %}
-        <input type="submit" class="btn btn-primary" value="submit">
-    </form>
-    
+    {% if users %}
+
+    <ol>
+        {% for person in users %}
+        <li>USer Info</li>
+        <ul>
+            <li>First Name: {{ person.FirstName }}</li>
+            <li>Last Name: {{ person.LastName }}</li>
+            <li>Email: {{ person.Email }}</li>
+        </ul>
+        {% endfor %}
+    </ol>
+
+    {% endif %}
+
+    <p>Test</p>
 </body>
 </html>
