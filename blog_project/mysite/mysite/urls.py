@@ -1,4 +1,4 @@
-"""advcbv URL Configuration
+"""mysite URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/2.2/topics/http/urls/
@@ -15,16 +15,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from basic_app import views
-from django.urls import include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    #path('',views.index,name='index'),
-    #path('',views.CBView.as_view(),name='index'),
-    path('',views.IndexView.as_view(),name='index'),
-    path('basic_app/',include('basic_app.urls',namespace='basic_app')),
-
 ]
-
-f

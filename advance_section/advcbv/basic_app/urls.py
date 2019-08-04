@@ -17,14 +17,18 @@ from django.contrib import admin
 from django.urls import path
 from basic_app import views
 from django.urls import include
+from django.conf.urls import url
+
+app_name = 'basic_app'
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    #path('',views.index,name='index'),
-    #path('',views.CBView.as_view(),name='index'),
-    path('',views.IndexView.as_view(),name='index'),
-    path('basic_app/',include('basic_app.urls',namespace='basic_app')),
+    
+    path('',views.SchoolListView.as_view(),name='list'),
+    #path(r'^(?P<px>[-\w]+)/$',views.SchoolDetailView.as_view(),name='detail'),
+    url(r'^(?P<pk>\d+)/$',views.SchoolDetailView.as_view(),name='detail'),
+    path('create/',views.SchoolCreateView.as_view(),name='create'),
+    url(r'^update/(?P<pk>\d+)/$',views.SchoolUpdateView.as_view(),name='update'),
+    url(r'^delete/(?P<pk>\d+)/$',views.SchoolDeleteView.as_view(),name='delete'),
+    
 
 ]
-
-f
