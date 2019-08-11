@@ -23,6 +23,7 @@ class PostDetailView(DetailView):
 
     
 class CreatePostView(LoginRequiredMixin,CreateView):
+    
     login_url = '/login/'
     redirect_field_name = 'blog/post_detail.html'
     form_class = PostForm
@@ -35,6 +36,7 @@ class PostUpdateView(LoginRequiredMixin,UpdateView):
     model = Post
 
 class PostDeleteView(LoginRequiredMixin,DeleteView):
+    template_name='post_delete_confirm.html'
     model = Post
     success_url = reverse_lazy('post_list')
 
@@ -53,7 +55,7 @@ class DraftListView(LoginRequiredMixin,ListView):
 def post_publish(request,pk):
     post = get_object_or_404(Post,pk=pk)
     post.publish()
-    return redirect('post_detail')
+    return redirect('post_detail',pk=pk)
 
 
 
