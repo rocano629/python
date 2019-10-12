@@ -1,6 +1,7 @@
 from django.shortcuts import render
+from django.contrib import messages
 from django.contrib.auth.mixins import LoginRequiredMixin,PermissionRequiredMixin
-from django.core.urlresovers import reverse,reverse_lazy
+from django.urls import reverse,reverse_lazy
 
 from django.views import generic
 from django.http import Http404
@@ -11,8 +12,8 @@ from django.views import generic
 from groups.models import Group,GroupMember
 # Create your views here.
 
-from . import models
-from . import forms
+from posts import models
+
 
 from django.contrib.auth import get_user_model
 
@@ -21,6 +22,7 @@ User = get_user_model()
 class PostList(SelectRelatedMixin,generic.ListView):
     model  = models.Post
     select_related = ('user','group')
+    
 
 class UserPosts(generic.ListView):
     model = models.Post
@@ -43,11 +45,11 @@ class UserPosts(generic.ListView):
 
 class PostDetail(SelectRelatedMixin,generic.DetailView):
     model = models.Post
-    select_related = ('user',Group)
+    select_related = ("user","group")
 
     def get_queryset(self):
         queryset = super().get_queryset()
-        return queryset.filter(user__name__iexact = self.kwargs.get('username'))
+        return queryset.filter(user__username__iexact = self.kwargs.get('username'))
     
 
 class CreatePost(LoginRequiredMixin,SelectRelatedMixin,generic.CreateView):
@@ -67,7 +69,7 @@ class DeletePost(LoginRequiredMixin,SelectRelatedMixin,generic.DeleteView):
 
     def get_queryset(self):
         queryset =  super().get_queryset()
-        return queryset.filter(user_id = self.rquest.user.id)
+        return queryset.filter(user_id = self.request.user.id)
 
     def delete(self,*args, **kwargs):
         messages.success(self.request,'Post Deleted')

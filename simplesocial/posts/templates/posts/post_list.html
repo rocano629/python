@@ -1,7 +1,8 @@
 {% extends 'posts/post_base.html' %}
 
-{% block pre_post_content %}
 
+{% block pre_post_content %}
+<h1>abc</h1>
 <div class='col-md-4'>
 
     {% if request.user.is_authenticated %}
@@ -9,7 +10,7 @@
     <h5 class="title">Your Groups</h5>
     <ul class="list-unstyled">
     
-    
+        
         {% for member_group in get_user_group %}
             <li><a href="{% url 'groups:single' slug=member_group.group.slug %}"></a></li>
         
@@ -52,7 +53,7 @@
 
 {% for post in post_list %}
 
-{% include "post/_post.html" %}
+{% include "posts/_post.html" %}
 
 {% endfor %}
 
