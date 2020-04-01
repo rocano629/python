@@ -37,7 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'DashboardApp'
+    'DashboardApp',
+    'rest_framework',
 ]
 
 MIDDLEWARE = [
@@ -79,8 +80,21 @@ DATABASES = {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
+    
 }
+##DATABASES = {
+##    'default': {
+##        'ENGINE': 'sql_server.pyodbc',
+##        'NAME': 'AdventureWorks2017',
+##        'HOST': 'DESKTOP-U688F7I',
+##        'USER': 'django',
+##        'PASSWORD': 'lapicero.1',
 
+##        'OPTIONS': {
+##            'driver': 'ODBC Driver 17 for SQL Server',
+##        }
+##    }
+##}
 
 # Password validation
 # https://docs.djangoproject.com/en/2.2/ref/settings/#auth-password-validators
