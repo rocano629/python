@@ -11,16 +11,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, shrink-to-fit=no" />
     <meta name="description" content="This is an example dashboard created using build-in elements and components.">
     <meta name="msapplication-tap-highlight" content="no">
-    <!--
-    =========================================================
-    * ArchitectUI HTML Theme Dashboard - v1.0.0
-    =========================================================
-    * Product Page: https://dashboardpack.com
-    * Copyright 2019 DashboardPack (https://dashboardpack.com)
-    * Licensed under MIT (https://github.com/DashboardPack/architectui-html-theme-free/blob/master/LICENSE)
-    =========================================================
-    * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-    -->
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <link rel="stylesheet" type="text/css" href="{% static 'dashboard/css/main.css' %}">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
@@ -35,7 +26,7 @@
         <div class="app-header header-shadow">
             <div class="app-header__logo">
                 <div class="logo-src"></div>
-                <div class="header__pane ml-auto">
+                {% comment %} <div class="header__pane ml-auto">
                     <div>
                         <button type="button" class="hamburger close-sidebar-btn hamburger--elastic" data-class="closed-sidebar">
                             <span class="hamburger-box">
@@ -43,7 +34,7 @@
                             </span>
                         </button>
                     </div>
-                </div>
+                </div> {% endcomment %}
             </div>
             <div class="app-header__mobile-menu">
                 <div>
@@ -63,15 +54,26 @@
                     </button>
                 </span>
             </div>    <div class="app-header__content">
-                <div class="app-header-left">
-                    <div class="search-wrapper">
+                <div class="app-header-left" >
+                <div>
+                
+                <ul class="header-menu nav">
+                </ul>
+                    <li class="btn-group nav-item">
+                            <a href="/" class="nav-link">
+                                <i class="nav-link-icon fa fa-edit"></i>
+                                Home
+                            </a>
+                        </li>
+                </div>
+                    {% comment %} <div class="search-wrapper">
                         <div class="input-holder">
                             <input type="text" class="search-input" placeholder="Type to search">
                             <button class="search-icon"><span></span></button>
                         </div>
                         <button class="close"></button>
-                    </div>
-                    <ul class="header-menu nav">
+                    </div> {% endcomment %}
+                    {% comment %} <ul class="header-menu nav">
                         <li class="nav-item">
                             <a href="javascript:void(0);" class="nav-link">
                                 <i class="nav-link-icon fa fa-database"> </i>
@@ -90,7 +92,8 @@
                                 Settings
                             </a>
                         </li>
-                    </ul>        </div>
+                    </ul>         {% endcomment %}
+                    </div>
                 <div class="app-header-right">
                     <div class="header-btn-lg pr-0">
                         <div class="widget-content p-0">
@@ -184,8 +187,8 @@
                                         <div class="widget-content-wrapper">
                                             <div class="widget-content-left mr-3">
                                                 <div class="switch has-switch switch-container-class" data-class="fixed-footer">
-                                                    <div class="switch-animate switch-off">
-                                                        <input type="checkbox" data-toggle="toggle" data-onstyle="success">
+                                                    <div class="switch-animate switch-on">
+                                                        <input type="checkbox" checked data-toggle="toggle" data-onstyle="success">
                                                     </div>
                                                 </div>
                                             </div>
@@ -408,273 +411,11 @@
                     </div>
                 </div>
             </div>
-        </div>        <div class="app-main">
-                <div class="app-sidebar sidebar-shadow">
-                    <div class="app-header__logo">
-                        <div class="logo-src"></div>
-                        <div class="header__pane ml-auto">
-                            <div>
-                                <button type="button" class="hamburger close-sidebar-btn hamburger--elastic" data-class="closed-sidebar">
-                                    <span class="hamburger-box">
-                                        <span class="hamburger-inner"></span>
-                                    </span>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="app-header__mobile-menu">
-                        <div>
-                            <button type="button" class="hamburger hamburger--elastic mobile-toggle-nav">
-                                <span class="hamburger-box">
-                                    <span class="hamburger-inner"></span>
-                                </span>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="app-header__menu">
-                        <span>
-                            <button type="button" class="btn-icon btn-icon-only btn btn-primary btn-sm mobile-toggle-header-nav">
-                                <span class="btn-icon-wrapper">
-                                    <i class="fa fa-ellipsis-v fa-w-6"></i>
-                                </span>
-                            </button>
-                        </span>
-                    </div>    <div class="scrollbar-sidebar">
-                        <div class="app-sidebar__inner">
-                            <ul class="vertical-nav-menu">
-                                <li class="app-sidebar__heading">Dashboards</li>
-                                <li>
-                                    <a href="index.html" class="mm-active">
-                                        <i class="metismenu-icon pe-7s-rocket"></i>
-                                        Dashboard Example 1
-                                    </a>
-                                </li>
-                                <li class="app-sidebar__heading">UI Components</li>
-                                <li
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                >
-                                    <a href="#">
-                                        <i class="metismenu-icon pe-7s-diamond"></i>
-                                        Elements
-                                        <i class="metismenu-state-icon pe-7s-angle-down caret-left"></i>
-                                    </a>
-                                    <ul
-                                        
-                                        
-                                        
-                                        
-                                        
-                                        
-                                        
-                                        
-                                    >
-                                        <li>
-                                            <a href="elements-buttons-standard.html">
-                                                <i class="metismenu-icon"></i>
-                                                Buttons
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="elements-dropdowns.html">
-                                                <i class="metismenu-icon">
-                                                </i>Dropdowns
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="elements-icons.html">
-                                                <i class="metismenu-icon">
-                                                </i>Icons
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="elements-badges-labels.html">
-                                                <i class="metismenu-icon">
-                                                </i>Badges
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="elements-cards.html">
-                                                <i class="metismenu-icon">
-                                                </i>Cards
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="elements-list-group.html">
-                                                <i class="metismenu-icon">
-                                                </i>List Groups
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="elements-navigation.html">
-                                                <i class="metismenu-icon">
-                                                </i>Navigation Menus
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="elements-utilities.html">
-                                                <i class="metismenu-icon">
-                                                </i>Utilities
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                >
-                                    <a href="#">
-                                        <i class="metismenu-icon pe-7s-car"></i>
-                                        Components
-                                        <i class="metismenu-state-icon pe-7s-angle-down caret-left"></i>
-                                    </a>
-                                    <ul
-                                        
-                                        
-                                        
-                                        
-                                        
-                                        
-                                        
-                                        
-                                        
-                                        
-                                        
-                                    >
-                                        <li>
-                                            <a href="components-tabs.html">
-                                                <i class="metismenu-icon">
-                                                </i>Tabs
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="components-accordions.html">
-                                                <i class="metismenu-icon">
-                                                </i>Accordions
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="components-notifications.html">
-                                                <i class="metismenu-icon">
-                                                </i>Notifications
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="components-modals.html">
-                                                <i class="metismenu-icon">
-                                                </i>Modals
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="components-progress-bar.html">
-                                                <i class="metismenu-icon">
-                                                </i>Progress Bar
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="components-tooltips-popovers.html">
-                                                <i class="metismenu-icon">
-                                                </i>Tooltips &amp; Popovers
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="components-carousel.html">
-                                                <i class="metismenu-icon">
-                                                </i>Carousel
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="components-calendar.html">
-                                                <i class="metismenu-icon">
-                                                </i>Calendar
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="components-pagination.html">
-                                                <i class="metismenu-icon">
-                                                </i>Pagination
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="components-scrollable-elements.html">
-                                                <i class="metismenu-icon">
-                                                </i>Scrollable
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="components-maps.html">
-                                                <i class="metismenu-icon">
-                                                </i>Maps
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li  >
-                                    <a href="tables-regular.html">
-                                        <i class="metismenu-icon pe-7s-display2"></i>
-                                        Tables
-                                    </a>
-                                </li>
-                                <li class="app-sidebar__heading">Widgets</li>
-                                <li>
-                                    <a href="dashboard-boxes.html">
-                                        <i class="metismenu-icon pe-7s-display2"></i>
-                                        Dashboard Boxes
-                                    </a>
-                                </li>
-                                <li class="app-sidebar__heading">Forms</li>
-                                <li>
-                                    <a href="forms-controls.html">
-                                        <i class="metismenu-icon pe-7s-mouse">
-                                        </i>Forms Controls
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="forms-layouts.html">
-                                        <i class="metismenu-icon pe-7s-eyedropper">
-                                        </i>Forms Layouts
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="forms-validation.html">
-                                        <i class="metismenu-icon pe-7s-pendrive">
-                                        </i>Forms Validation
-                                    </a>
-                                </li>
-                                <li class="app-sidebar__heading">Charts</li>
-                                <li>
-                                    <a href="charts-chartjs.html">
-                                        <i class="metismenu-icon pe-7s-graph2">
-                                        </i>ChartJS
-                                    </a>
-                                </li>
-                                <li class="app-sidebar__heading">PRO Version</li>
-                                <li>
-                                    <a href="https://dashboardpack.com/theme-details/architectui-dashboard-html-pro/" target="_blank">
-                                        <i class="metismenu-icon pe-7s-graph2">
-                                        </i>
-                                        Upgrade to PRO
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>    <div class="app-main__outer">
+        </div>        
+        <div class="app-main">
+                
+                
+                <div class="app-main__outer1">
                     <div class="app-main__inner">
                         <div class="app-page-title">
                             <div class="page-title-wrapper">
@@ -684,7 +425,7 @@
                                         </i>
                                     </div>
                                     <div>Analytics Dashboard
-                                        <div class="page-title-subheading">This is an example dashboard created using build-in elements and components.
+                                        <div class="page-title-subheading">This is an example dashboard with a bar chart using charts.js.
                                         </div>
                                     </div>
                                 </div>
@@ -739,7 +480,8 @@
                                         </div>
                                     </div>
                                 </div>    </div>
-                        </div>            <div class="row">
+                        </div>            
+                        {% comment %} <div class="row">
                             <div class="col-md-6 col-xl-4">
                                 <div class="card mb-3 widget-content bg-midnight-bloom">
                                     <div class="widget-content-wrapper text-white">
@@ -792,8 +534,8 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="row">
+                        </div> {% endcomment %}
+                        <div class="row justify-content-md-center">
                             <div class="col-md-12 col-lg-6">
                                 <div class="mb-3 card">
                                     <div class="card-header-tab card-header-tab-animation card-header">
@@ -818,8 +560,8 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <h6 class="text-muted text-uppercase font-size-md opacity-5 font-weight-normal">Top Authors</h6>
-                                                <div class="scroll-area-sm">
+                                                {% comment %} <h6 class="text-muted text-uppercase font-size-md opacity-5 font-weight-normal">Top Authors</h6> {% endcomment %}
+                                                {% comment %} <div class="scroll-area-sm">
                                                     <div class="scrollbar-container">
                                                         <ul class="rm-list-borders rm-list-borders-scroll list-group list-group-flush">
                                                             <li class="list-group-item">
@@ -934,13 +676,13 @@
                                                             </li>
                                                         </ul>
                                                     </div>
-                                                </div>
+                                                </div> {% endcomment %}
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-12 col-lg-6">
+                            {% comment %} <div class="col-md-12 col-lg-6">
                                 <div class="mb-3 card">
                                     <div class="card-header-tab card-header">
                                         <div class="card-header-title">
@@ -1051,9 +793,11 @@
                                         </div>
                                     </div>
                                 </div>
+                            </div> 
                             </div>
-                        </div>
-                        <div class="row">
+                            {% endcomment %}
+                        
+                        {% comment %} <div class="row">
                             <div class="col-md-6 col-xl-4">
                                 <div class="card mb-3 widget-content">
                                     <div class="widget-content-outer">
@@ -1123,8 +867,8 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="row">
+                        </div> {% endcomment %}
+                        {% comment %} <div class="row">
                             <div class="col-md-12">
                                 <div class="main-card mb-3 card">
                                     <div class="card-header">Active Users
@@ -1255,8 +999,8 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="row">
+                        </div> {% endcomment %}
+                        {% comment %} <div class="row">
                             <div class="col-md-6 col-lg-3">
                                 <div class="card-shadow-danger mb-3 widget-chart widget-chart2 text-left card">
                                     <div class="widget-content">
@@ -1342,12 +1086,12 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="app-wrapper-footer">
-                        <div class="app-footer">
+                    </div> {% endcomment %}
+                    {% comment %} <div class="app-wrapper-footer"> {% endcomment %}
+                        <div class="app-footer fixed-footer">
                             <div class="app-footer__inner">
                                 <div class="app-footer-left">
-                                    <ul class="nav">
+                                    {% comment %} <ul class="nav">
                                         <li class="nav-item">
                                             <a href="javascript:void(0);" class="nav-link">
                                                 Footer Link 1
@@ -1358,28 +1102,29 @@
                                                 Footer Link 2
                                             </a>
                                         </li>
-                                    </ul>
+                                    </ul> {% endcomment %}
                                 </div>
                                 <div class="app-footer-right">
                                     <ul class="nav">
-                                        <li class="nav-item">
+                                        {% comment %} <li class="nav-item">
                                             <a href="javascript:void(0);" class="nav-link">
                                                 Footer Link 3
                                             </a>
-                                        </li>
+                                        </li> {% endcomment %}
                                         <li class="nav-item">
                                             <a href="javascript:void(0);" class="nav-link">
                                                 <div class="badge badge-success mr-1 ml-0">
-                                                    <small>NEW</small>
+                                                    {% comment %} <small></small> {% endcomment %}
                                                 </div>
-                                                Footer Link 4
+                                                Powered by Django
                                             </a>
                                         </li>
                                     </ul>
                                 </div>
                             </div>
                         </div>
-                    </div>    </div>
+                    {% comment %} </div>     {% endcomment %}
+                </div>
                 <script src="http://maps.google.com/maps/api/js?sensor=true"></script>
         </div>
     </div>
@@ -1389,9 +1134,9 @@
 <script>
     {% block jquery %}
 
-    var endpoint = 'api/chart/data/'
+    var endpoint = 'Dashboard/api/chart/data/'
     var DefaultData = [];
-    var Labels = ['test', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'];
+    var Labels = ['2011', '2012', '2013', '2014'];
     $.ajax({
         method:'GET',
         url: endpoint,
@@ -1403,7 +1148,7 @@
         data: {
             labels: Labels,
             datasets: [{
-                label: '# of Votes',
+                label: 'Sales',
                 data: DefaultData,
                 backgroundColor: [
                     'rgba(255, 99, 132, 0.2)',

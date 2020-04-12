@@ -7,4 +7,4 @@ class ThanksPage(TemplateView):
     template_name = 'thanks.html'
 
 class HomePage(TemplateView):
-    template_name = "index.html"
+    template_name = "LandingApp/index.html"
