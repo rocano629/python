@@ -6,7 +6,7 @@ from django.views.generic import View
 import pyodbc 
 import pandas as pd
 import plotly.graph_objects as go
-from DashboardApp.models import Salesreport
+from DashboardApp.models import SalesReport
 # Create your views here.
 
 class HomeView(View):
@@ -20,7 +20,7 @@ class ChartData(APIView):
 
     def get(self, request, format=None):
 
-        df = pd.DataFrame(list(Salesreport.objects.all().values()))
+        df = pd.DataFrame(list(SalesReport.objects.all().values()))
         # df = pd.DataFrame(SQL_Query, columns=['2014'])
         
         Total2011 = df['number_2011'].sum()
