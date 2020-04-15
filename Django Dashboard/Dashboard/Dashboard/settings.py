@@ -25,7 +25,7 @@ SECRET_KEY = '#%ka@=@wf)=_(-j+b08n9)=hvwt=r=jm&2xnnu@#gnw_e-f_9x'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['rock629.pythonanywhere.com','127.0.0.1']
 
 
 # Application definition
@@ -138,3 +138,4 @@ STATIC_FILES = os.path.join(BASE_DIR,'static')
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, "static"),
 )
+STATIC_ROOT = '/home/rock629/static/'
